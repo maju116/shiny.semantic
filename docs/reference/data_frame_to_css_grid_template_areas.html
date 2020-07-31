@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Show, Hide or Remove Semantic UI modal — show_modal • SHINY.SEMANTIC</title>
+<title>Generate CSS string representing grid template areas. — data_frame_to_css_grid_template_areas • SHINY.SEMANTIC</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,8 @@
 
 
 
-<meta property="og:title" content="Show, Hide or Remove Semantic UI modal — show_modal" />
-<meta property="og:description" content="This displays a hidden Semantic UI modal." />
+<meta property="og:title" content="Generate CSS string representing grid template areas. — data_frame_to_css_grid_template_areas" />
+<meta property="og:description" content="Generate CSS string representing grid template areas." />
 
 
 
@@ -133,38 +133,40 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Show, Hide or Remove Semantic UI modal</h1>
-    <small class="dont-index">Source: <a href='https://github.com/Appsilon/shiny.semantic/blob/master/R/modal.R'><code>R/modal.R</code></a></small>
-    <div class="hidden name"><code>show_modal.Rd</code></div>
+    <h1>Generate CSS string representing grid template areas.</h1>
+    <small class="dont-index">Source: <a href='https://github.com/Appsilon/shiny.semantic/blob/master/R/grid.R'><code>R/grid.R</code></a></small>
+    <div class="hidden name"><code>data_frame_to_css_grid_template_areas.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>This displays a hidden Semantic UI modal.</p>
+    <p>Generate CSS string representing grid template areas.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>show_modal</span>(<span class='no'>id</span>, <span class='kw'>session</span> <span class='kw'>=</span> <span class='kw pkg'>shiny</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/shiny/man/domains.html'>getDefaultReactiveDomain</a></span>())
-
-<span class='fu'>remove_modal</span>(<span class='no'>id</span>, <span class='kw'>session</span> <span class='kw'>=</span> <span class='kw pkg'>shiny</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/shiny/man/domains.html'>getDefaultReactiveDomain</a></span>())
-
-<span class='fu'>remove_all_modals</span>(<span class='kw'>session</span> <span class='kw'>=</span> <span class='kw pkg'>shiny</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/shiny/man/domains.html'>getDefaultReactiveDomain</a></span>())
-
-<span class='fu'>removeModal</span>(<span class='kw'>session</span> <span class='kw'>=</span> <span class='kw pkg'>shiny</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/shiny/man/domains.html'>getDefaultReactiveDomain</a></span>())
-
-<span class='fu'>hide_modal</span>(<span class='no'>id</span>, <span class='kw'>session</span> <span class='kw'>=</span> <span class='kw pkg'>shiny</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/shiny/man/domains.html'>getDefaultReactiveDomain</a></span>())</pre>
+    <pre class="usage"><span class='fu'>data_frame_to_css_grid_template_areas</span>(<span class='no'>areas_dataframe</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>id</th>
-      <td><p>ID of the modal that will be displayed.</p></td>
-    </tr>
-    <tr>
-      <th>session</th>
-      <td><p>The <code>session</code> object passed to function given to
-<code>shinyServer</code>.</p></td>
+      <th>areas_dataframe</th>
+      <td><p>data.frame of character representing grid areas</p></td>
     </tr>
     </table>
+
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>character</p>
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>This is a helper function used in grid_template()</p>
+<pre>
+<span class='no'>areas_dataframe</span> <span class='kw'>&amp;</span><span class='no'>lt</span>;- <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>rbind</a></span>(
+   <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"header"</span>, <span class='st'>"header"</span>, <span class='st'>"header"</span>),
+   <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"menu"</span>,   <span class='st'>"main"</span>,   <span class='st'>"right1"</span>),
+   <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"menu"</span>,   <span class='st'>"main"</span>,   <span class='st'>"right2"</span>)
+)
+
+<span class='no'>result</span> <span class='kw'>==</span> <span class='st'>"'header header header' 'menu main right1' 'menu main right2'"</span></pre>
 
 
   </div>

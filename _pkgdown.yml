@@ -92,6 +92,19 @@ reference:
   - '`update_rating_input`'
   - '`update_slider`'
 
+- title: Modals
+  desc: All functions for generating and manipulating `shiny.semantic` modals.
+  contents:
+  - '`modal`'
+  - '`modalDialog`'
+  - '`create_modal`'
+  - '`showModal`'
+  - '`show_modal`'
+  - '`remove_modal`'
+  - '`remove_all_modals`'
+  - '`removeModal`'
+  - '`hide_modal`'
+
 - title: Search functions
   desc: Functions for search API.
   contents:

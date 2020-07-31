@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Show, Hide or Remove Semantic UI modal — show_modal • SHINY.SEMANTIC</title>
+<title>Format string template (that represents HTML template) with custom CSS styles. — apply_custom_styles_to_html_template • SHINY.SEMANTIC</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,8 @@
 
 
 
-<meta property="og:title" content="Show, Hide or Remove Semantic UI modal — show_modal" />
-<meta property="og:description" content="This displays a hidden Semantic UI modal." />
+<meta property="og:title" content="Format string template (that represents HTML template) with custom CSS styles. — apply_custom_styles_to_html_template" />
+<meta property="og:description" content="Format string template (that represents HTML template) with custom CSS styles." />
 
 
 
@@ -133,39 +133,49 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Show, Hide or Remove Semantic UI modal</h1>
-    <small class="dont-index">Source: <a href='https://github.com/Appsilon/shiny.semantic/blob/master/R/modal.R'><code>R/modal.R</code></a></small>
-    <div class="hidden name"><code>show_modal.Rd</code></div>
+    <h1>Format string template (that represents HTML template) with custom CSS styles.</h1>
+    <small class="dont-index">Source: <a href='https://github.com/Appsilon/shiny.semantic/blob/master/R/grid.R'><code>R/grid.R</code></a></small>
+    <div class="hidden name"><code>apply_custom_styles_to_html_template.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>This displays a hidden Semantic UI modal.</p>
+    <p>Format string template (that represents HTML template) with custom CSS styles.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>show_modal</span>(<span class='no'>id</span>, <span class='kw'>session</span> <span class='kw'>=</span> <span class='kw pkg'>shiny</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/shiny/man/domains.html'>getDefaultReactiveDomain</a></span>())
-
-<span class='fu'>remove_modal</span>(<span class='no'>id</span>, <span class='kw'>session</span> <span class='kw'>=</span> <span class='kw pkg'>shiny</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/shiny/man/domains.html'>getDefaultReactiveDomain</a></span>())
-
-<span class='fu'>remove_all_modals</span>(<span class='kw'>session</span> <span class='kw'>=</span> <span class='kw pkg'>shiny</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/shiny/man/domains.html'>getDefaultReactiveDomain</a></span>())
-
-<span class='fu'>removeModal</span>(<span class='kw'>session</span> <span class='kw'>=</span> <span class='kw pkg'>shiny</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/shiny/man/domains.html'>getDefaultReactiveDomain</a></span>())
-
-<span class='fu'>hide_modal</span>(<span class='no'>id</span>, <span class='kw'>session</span> <span class='kw'>=</span> <span class='kw pkg'>shiny</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/shiny/man/domains.html'>getDefaultReactiveDomain</a></span>())</pre>
+    <pre class="usage"><span class='fu'>apply_custom_styles_to_html_template</span>(
+  <span class='kw'>html_template</span> <span class='kw'>=</span> <span class='st'>""</span>,
+  <span class='kw'>area_names</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(),
+  <span class='kw'>container_style</span> <span class='kw'>=</span> <span class='st'>""</span>,
+  <span class='kw'>area_styles</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>()
+)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>id</th>
-      <td><p>ID of the modal that will be displayed.</p></td>
+      <th>html_template</th>
+      <td><p>character</p></td>
     </tr>
     <tr>
-      <th>session</th>
-      <td><p>The <code>session</code> object passed to function given to
-<code>shinyServer</code>.</p></td>
+      <th>area_names</th>
+      <td><p>vector of character</p></td>
+    </tr>
+    <tr>
+      <th>container_style</th>
+      <td><p>character</p></td>
+    </tr>
+    <tr>
+      <th>area_styles</th>
+      <td><p>list of character</p></td>
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>character</p>
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>This is a helper function used in grid()</p>
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
